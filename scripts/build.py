@@ -86,6 +86,30 @@ def alpha(hex_color: str, value: str) -> str:
     return f"{hex_color}{value}"
 
 
+def hex_to_hsl(hex_color: str) -> str:
+    raw = hex_color.lstrip("#")
+    r = int(raw[0:2], 16) / 255.0
+    g = int(raw[2:4], 16) / 255.0
+    b = int(raw[4:6], 16) / 255.0
+    maxc = max(r, g, b)
+    minc = min(r, g, b)
+    light = (maxc + minc) / 2
+    if maxc == minc:
+        hue = 0.0
+        sat = 0.0
+    else:
+        delta = maxc - minc
+        sat = delta / (2 - maxc - minc) if light > 0.5 else delta / (maxc + minc)
+        if maxc == r:
+            hue = (g - b) / delta + (6 if g < b else 0)
+        elif maxc == g:
+            hue = (b - r) / delta + 2
+        else:
+            hue = (r - g) / delta + 4
+        hue /= 6
+    return f"{hue * 360:.1f} {sat * 100:.1f}% {light * 100:.1f}%"
+
+
 def yaml_scalar(value: Any) -> str:
     if isinstance(value, bool):
         return "true" if value else "false"
@@ -565,6 +589,53 @@ def build_neovim(palette: dict[str, Any]) -> None:
     write("applications/neovim/colors/birren-industrial.lua", "\n".join(lines))
 
 
+def build_shadcn(palette: dict[str, Any]) -> None:
+    mapping = palette.get("shadcn", {})
+    if not mapping:
+        return
+    radius = "0.5rem"
+    resolved_hex = {var: color_hex(palette, color_id) for var, color_id in mapping.items()}
+    resolved_hsl = {var: hex_to_hsl(value) for var, value in resolved_hex.items()}
+
+    css_lines = [
+        f"/* {GENERATED} */",
+        "/* Birren Industrial — drop-in shadcn/ui theme (HSL format, works with Tailwind v3 and v4). */",
+        "",
+        "@layer base {",
+        "  :root {",
+    ]
+    for var, value in resolved_hsl.items():
+        css_lines.append(f"    --{var}: {value};")
+    css_lines.append(f"    --radius: {radius};")
+    css_lines.append("  }")
+    css_lines.append("}")
+    write("applications/shadcn/birren-industrial.css", "\n".join(css_lines))
+
+    hex_lines = [
+        f"/* {GENERATED} */",
+        "/* Birren Industrial — shadcn/ui theme using raw hex values for Tailwind v4 (@theme inline). */",
+        "",
+        ":root {",
+    ]
+    for var, value in resolved_hex.items():
+        hex_lines.append(f"  --{var}: {value};")
+    hex_lines.append(f"  --radius: {radius};")
+    hex_lines.append("}")
+    write("applications/shadcn/birren-industrial-hex.css", "\n".join(hex_lines))
+
+    light_vars = dict(resolved_hsl)
+    light_vars["radius"] = radius
+    registry = {
+        "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+        "name": "birren-industrial",
+        "type": "registry:theme",
+        "title": palette["name"],
+        "description": palette["description"],
+        "cssVars": {"light": light_vars},
+    }
+    write("applications/shadcn/registry.json", json.dumps(registry, indent=2))
+
+
 def main() -> None:
     palette = load_palette()
     build_json_and_yaml(palette)
@@ -578,6 +649,7 @@ def main() -> None:
     build_wezterm(palette)
     build_vscode(palette)
     build_neovim(palette)
+    build_shadcn(palette)
 
 
 if __name__ == "__main__":

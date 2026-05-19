@@ -49,6 +49,7 @@ Original chip values are 40×40 pixel averages sampled from the center of each p
 - Ghostty themes: [`applications/ghostty`](applications/ghostty)
 - Visual Studio Code themes: [`applications/vscode`](applications/vscode)
 - Neovim colorscheme: [`applications/neovim/colors/birren-industrial.lua`](applications/neovim/colors/birren-industrial.lua)
+- shadcn/ui theme: [`applications/shadcn`](applications/shadcn)
 - Extra terminal ports: Alacritty, Kitty, and WezTerm in [`applications/`](applications)
 
 ## Install snippets
@@ -76,6 +77,21 @@ cp -R applications/vscode/* ~/.vscode/extensions/birren-industrial-colors/
 ```
 
 Then choose **Birren Industrial Light** from the Color Theme picker.
+
+### shadcn/ui
+
+Drop the generated CSS into your app's global stylesheet (the file that already
+defines your `:root` shadcn variables), or import it directly:
+
+```css
+@import "./birren-industrial.css";
+```
+
+For Tailwind v4 (`@theme inline` with raw hex values) use
+[`applications/shadcn/birren-industrial-hex.css`](applications/shadcn/birren-industrial-hex.css)
+instead. A
+[`registry.json`](applications/shadcn/registry.json) is also generated for use
+with the shadcn CLI.
 
 ### Neovim
 
