@@ -224,7 +224,7 @@ def build_ghostty(palette: dict[str, Any]) -> None:
     )
     for index, value in enumerate(scheme["normal"] + scheme["bright"]):
         lines.append(f"palette = {index}={value}")
-    write("applications/ghostty/birren-industrial-light", "\n".join(lines))
+    write("applications/ghostty/Birren Industrial Light", "\n".join(lines))
 
 
 def build_kitty(palette: dict[str, Any]) -> None:

@@ -59,11 +59,11 @@ Copy one of the generated theme files into Ghostty's theme directory, then set i
 
 ```sh
 mkdir -p ~/.config/ghostty/themes
-cp applications/ghostty/birren-industrial-light ~/.config/ghostty/themes/
+cp "applications/ghostty/Birren Industrial Light" ~/.config/ghostty/themes/
 ```
 
 ```ini
-theme = birren-industrial-light
+theme = Birren Industrial Light
 ```
 
 ### Visual Studio Code
