@@ -81,7 +81,7 @@ const birrenIndustrial = {
     }
   },
   "links": {
-    "homepage": "https://r-cha.github.io/birren/",
+    "homepage": "https://birren.vercel.app/",
     "repository": "https://github.com/r-cha/birren",
     "issues": "https://github.com/r-cha/birren/issues",
     "rawSource": "https://raw.githubusercontent.com/r-cha/birren/main/source/birren-industrial.json"

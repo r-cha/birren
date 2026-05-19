@@ -2,7 +2,7 @@
 
 An unofficial software color system adapted from the scanned **Industrial Plants** color chart associated with Faber Birren. The palette keeps the chart's central idea intact: use a low-glare seafoam green as the long-duration work background, set white instrument panels against it for contrast, keep warm neutrals secondary, and reserve brilliant safety colors for state, hazard, and command signaling.
 
-Landing page: <https://r-cha.github.io/birren/>  
+Landing page: <https://birren.vercel.app/>  
 Repository: <https://github.com/r-cha/birren>
 
 The source values live in [`source/birren-industrial.json`](source/birren-industrial.json). Everything in `dist/` and `applications/` is generated from that file by [`scripts/build.py`](scripts/build.py).
@@ -97,7 +97,7 @@ After editing [`source/birren-industrial.json`](source/birren-industrial.json):
 python3 scripts/build.py
 ```
 
-Open [`index.html`](index.html) locally for the landing page, or deploy the repository with GitHub Pages at <https://r-cha.github.io/birren/>.
+Open [`index.html`](index.html) locally for the landing page, or deploy it at <https://birren.vercel.app/>.
 
 ## Note
 
