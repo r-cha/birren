@@ -1,0 +1,30 @@
+{
+  "name": "birren-industrial-colors",
+  "displayName": "Birren Industrial Colors",
+  "description": "An unofficial software palette adapted from an Industrial Plants color chart associated with Faber Birren, with seafoam light green as the primary fatigue-reducing field color, white instrument panels for high-contrast work surfaces, and brilliant safety colors reserved for state and hazard signaling.",
+  "version": "0.1.0",
+  "publisher": "birren-industrial-colors",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Birren Industrial Light",
+        "uiTheme": "vs",
+        "path": "./themes/birren-industrial-light-color-theme.json"
+      }
+    ]
+  },
+  "homepage": "https://r-cha.github.io/birren/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-cha/birren.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r-cha/birren/issues"
+  }
+}

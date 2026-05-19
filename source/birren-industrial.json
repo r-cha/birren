@@ -1,0 +1,195 @@
+{
+  "name": "Birren Industrial Colors",
+  "slug": "birren-industrial",
+  "version": "0.1.0",
+  "description": "An unofficial software palette adapted from an Industrial Plants color chart associated with Faber Birren, with seafoam light green as the primary fatigue-reducing field color, white instrument panels for high-contrast work surfaces, and brilliant safety colors reserved for state and hazard signaling.",
+  "links": {
+    "homepage": "https://r-cha.github.io/birren/",
+    "repository": "https://github.com/r-cha/birren",
+    "issues": "https://github.com/r-cha/birren/issues",
+    "rawSource": "https://raw.githubusercontent.com/r-cha/birren/main/source/birren-industrial.json"
+  },
+  "origin": {
+    "image": "../birren-industrial-colors.jpeg",
+    "source": "Scanned Industrial Plants color chart associated with Faber Birren",
+    "sampling": "Original chip hex values are 40×40 pixel averages sampled from the center of each printed color chip in the local JPEG scan. Instrument White is a 40×40 average sampled from the chart paper to represent white instrument panels against the seafoam field.",
+    "note": "This is an independent historical adaptation, not an official product from Faber Birren's estate or any rights holder."
+  },
+  "colors": {
+    "light-green": {
+      "name": "Light Green",
+      "hex": "#B6DAC0",
+      "group": "interior",
+      "intent": "The quiet seafoam field color for reducing visual fatigue.",
+      "uiUse": "Primary background for editors, reading panes, dashboards, and long-lived work surfaces."
+    },
+    "instrument-white": {
+      "name": "Instrument White",
+      "hex": "#F0F0EA",
+      "group": "derived",
+      "intent": "A clean panel white that lets the seafoam background read as the room around the instrument.",
+      "uiUse": "Primary panels, cards, sidebars, forms, modals, and instrument-like UI surfaces placed on the seafoam field."
+    },
+    "beige": {
+      "name": "Beige",
+      "hex": "#DBD6C0",
+      "group": "interior",
+      "intent": "A low-glare warm neutral, now held back so white panels can contrast clearly against the seafoam field.",
+      "uiUse": "Warm secondary notes, quiet side material, annotations, and surfaces that should feel archival rather than instrument-like."
+    },
+    "light-blue": {
+      "name": "Light Blue",
+      "hex": "#ADCED7",
+      "group": "interior",
+      "intent": "A cool daylight counterweight to the green field.",
+      "uiUse": "Selections, linked-data backgrounds, info surfaces, calm hover states, and non-urgent emphasis."
+    },
+    "soft-yellow": {
+      "name": "Soft Yellow",
+      "hex": "#FDF7B1",
+      "group": "interior",
+      "intent": "A readable, gentle highlight rather than an alarm color.",
+      "uiUse": "Search hits, inline highlights, teaching callouts, and transient attention that should not imply danger."
+    },
+    "light-gray": {
+      "name": "Light Gray",
+      "hex": "#BECECF",
+      "group": "interior",
+      "intent": "A cool structural neutral for separating areas without strong contrast.",
+      "uiUse": "Secondary backgrounds, dividers, disabled controls, code block frames, and quiet empty states."
+    },
+    "medium-gray": {
+      "name": "Medium Gray",
+      "hex": "#69867C",
+      "group": "interior",
+      "intent": "The working middle value between the fatigue-reducing field and deep text.",
+      "uiUse": "Muted text, secondary icons, borders, terminal bright black, minimap marks, and inactive UI."
+    },
+    "deep-gray": {
+      "name": "Deep Gray",
+      "hex": "#4B6E5B",
+      "group": "interior",
+      "intent": "A green-charcoal anchor that preserves the industrial character of the chart.",
+      "uiUse": "Primary text, title bars, terminal black, high-emphasis outlines, and deep structural accents."
+    },
+    "spotlight-buff": {
+      "name": "Spotlight Buff",
+      "hex": "#E6DEAE",
+      "group": "interior",
+      "intent": "A warm reflected-light color for emphasis without the glare of pure white.",
+      "uiUse": "Warm highlights, headings, terminal normal white, and soft badges."
+    },
+    "medium-green": {
+      "name": "Medium Green",
+      "hex": "#4E8C5A",
+      "group": "safety",
+      "intent": "A stable operational green, more subdued and less alarming than safety green.",
+      "uiUse": "Positive but routine states, strings in code, confirmed status, completed work, and secondary brand accents."
+    },
+    "sandalwood": {
+      "name": "Sandalwood",
+      "hex": "#988454",
+      "group": "safety",
+      "intent": "An earthy brown-yellow that bridges neutrals and warnings.",
+      "uiUse": "Types, tags, metadata, terminal normal yellow, annotations, and low-priority caution on light backgrounds."
+    },
+    "medium-blue": {
+      "name": "Medium Blue",
+      "hex": "#4F7B80",
+      "group": "safety",
+      "intent": "A subdued machine-room blue for orientation and controls.",
+      "uiUse": "Primary controls, functions, navigation accents, selected tabs, and focusable interface chrome."
+    },
+    "solar-yellow": {
+      "name": "Solar Yellow",
+      "hex": "#EEC902",
+      "group": "safety",
+      "intent": "A brilliant safety yellow for urgent visibility.",
+      "uiUse": "Warnings, active search hits, current cursor-line markers, required fields, and focus rings used sparingly."
+    },
+    "alert-orange": {
+      "name": "Alert Orange",
+      "hex": "#E15602",
+      "group": "safety",
+      "intent": "A high-energy signal between warning and danger.",
+      "uiUse": "Destructive previews, changed files, performance alerts, numeric emphasis, and escalation states."
+    },
+    "fire-red": {
+      "name": "Fire Red",
+      "hex": "#7C0203",
+      "group": "safety",
+      "intent": "The deepest hazard color in the chart: serious, compressed, and unmistakable.",
+      "uiUse": "Errors, failed jobs, delete affordances, diff deletions, security alerts, and badges that require immediate action."
+    },
+    "safety-green": {
+      "name": "Safety Green",
+      "hex": "#028339",
+      "group": "safety",
+      "intent": "A brilliant go/safe signal distinct from the restful background green.",
+      "uiUse": "Success states, passing tests, additions in diffs, enabled safety indicators, and high-confidence positive feedback."
+    },
+    "caution-blue": {
+      "name": "Caution Blue",
+      "hex": "#026289",
+      "group": "safety",
+      "intent": "A saturated instruction blue for labels and command emphasis.",
+      "uiUse": "Links, command palette accents, important information, terminal bright blue, keywords, and actionable text."
+    }
+  },
+  "roles": {
+    "background": "light-green",
+    "background-muted": "instrument-white",
+    "surface": "instrument-white",
+    "surface-raised": "instrument-white",
+    "surface-sunken": "light-blue",
+    "text": "deep-gray",
+    "text-muted": "medium-gray",
+    "border": "medium-gray",
+    "primary": "medium-blue",
+    "secondary": "medium-green",
+    "accent": "caution-blue",
+    "highlight": "soft-yellow",
+    "selection": "light-blue",
+    "success": "safety-green",
+    "warning": "solar-yellow",
+    "danger": "fire-red",
+    "attention": "alert-orange",
+    "link": "caution-blue",
+    "focus": "solar-yellow"
+  },
+  "syntax": {
+    "comment": "medium-gray",
+    "foreground": "deep-gray",
+    "keyword": "caution-blue",
+    "string": "medium-green",
+    "function": "medium-blue",
+    "variable": "deep-gray",
+    "type": "sandalwood",
+    "constant": "fire-red",
+    "number": "alert-orange",
+    "operator": "medium-blue",
+    "punctuation": "deep-gray"
+  },
+  "ansi": {
+    "normal": {
+      "black": "deep-gray",
+      "red": "fire-red",
+      "green": "medium-green",
+      "yellow": "sandalwood",
+      "blue": "medium-blue",
+      "magenta": "alert-orange",
+      "cyan": "caution-blue",
+      "white": "spotlight-buff"
+    },
+    "bright": {
+      "black": "medium-gray",
+      "red": "alert-orange",
+      "green": "safety-green",
+      "yellow": "solar-yellow",
+      "blue": "caution-blue",
+      "magenta": "soft-yellow",
+      "cyan": "light-blue",
+      "white": "instrument-white"
+    }
+  }
+}

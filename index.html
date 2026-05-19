@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" data-palette="birren-industrial-light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birren Industrial Colors</title>
+  <meta name="description" content="A software color scheme adapted from an Industrial Plants color chart associated with Faber Birren, centered on fatigue-reducing seafoam green, white instrument panels, and industrial safety colors.">
+  <link rel="canonical" href="https://r-cha.github.io/birren/">
+  <link rel="stylesheet" href="dist/birren-industrial.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      color-scheme: light;
+      --font-body: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --font-display: Rockwell, Clarendon, "American Typewriter", "Roboto Slab", Georgia, serif;
+      --font-industrial: "DIN Condensed", "Avenir Next Condensed", "Arial Narrow", "Franklin Gothic Medium", "Gill Sans", "Trebuchet MS", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    body {
+      margin: 0;
+      background: var(--birren-background);
+      color: var(--birren-text);
+      font-family: var(--font-body);
+      font-size: clamp(17px, 1.4vw, 20px);
+      line-height: 1.54;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+    a { color: var(--birren-link); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    img { max-width: 100%; display: block; }
+    code, pre, .mono {
+      font-family: var(--font-mono);
+      font-size: 0.92em;
+    }
+    .page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      min-height: 82svh;
+      display: flex;
+      align-items: center;
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .eyebrow {
+      color: var(--birren-text-muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: var(--font-industrial);
+    }
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 0.92;
+      margin: 0;
+      letter-spacing: -0.055em;
+      max-width: 100%;
+      text-wrap: balance;
+    }
+    h1 {
+      font-size: clamp(4rem, 12vw, 10.8rem);
+      max-width: 100%;
+      text-transform: uppercase;
+    }
+    h2 { font-size: clamp(2.5rem, 8vw, 6.6rem); margin-bottom: 1.4rem; hyphens: none; }
+    h3 { font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -0.035em; }
+    .lead { font-size: clamp(1.2rem, 2vw, 1.65rem); max-width: 42rem; }
+    .hero-copy { display: grid; gap: 1.3rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.8rem; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.55rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--birren-border);
+      color: var(--birren-text);
+      background: color-mix(in srgb, var(--birren-surface-raised), transparent 16%);
+      text-decoration: none;
+      font-family: var(--font-industrial);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .button.primary { background: var(--birren-primary); color: var(--birren-spotlight-buff); border-color: var(--birren-primary); }
+    .hero-copy, .split > * { min-width: 0; }
+    section { padding: clamp(3.5rem, 8vw, 7rem) 0; border-top: 1px solid color-mix(in srgb, var(--birren-border), transparent 55%); }
+    .split { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
+    .split h2 { font-size: clamp(2.35rem, 4vw, 3.8rem); }
+    .source-scan {
+      margin: 1.5rem 0 0;
+      padding: 0.65rem;
+      background: color-mix(in srgb, var(--birren-surface-raised), white 10%);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 35%);
+    }
+    .source-scan img { border: 1px solid color-mix(in srgb, var(--birren-border), transparent 45%); }
+    .source-scan figcaption { color: var(--birren-text-muted); font-size: 0.86rem; margin: 0.75rem 0 0; }
+    .measure { max-width: 47rem; }
+    .note {
+      background: color-mix(in srgb, var(--birren-surface), transparent 8%);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 40%);
+      padding: 1rem 1.1rem;
+    }
+    .note + .note { margin-top: 1rem; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .principle, .role-card, .format-card {
+      background: color-mix(in srgb, var(--birren-surface), transparent 7%);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 42%);
+      padding: 1.1rem;
+    }
+    .principle strong, .role-card strong, .format-card strong { display: block; line-height: 1.12; margin-bottom: 0.45rem; }
+    .chart-palette {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.4rem;
+      padding: 1rem;
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 42%);
+      background: color-mix(in srgb, var(--birren-surface), transparent 22%);
+    }
+    .chip-row {
+      display: grid;
+      grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 14rem) minmax(8rem, 14rem) minmax(10rem, 1fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .chip-copy {
+      background: color-mix(in srgb, var(--birren-surface), transparent 12%);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 58%);
+      padding: 0.85rem;
+      display: grid;
+      align-content: center;
+    }
+    .chip-copy-left { text-align: right; }
+    .chip-copy-right { text-align: left; }
+    .chip-copy p { font-size: 0.86rem; margin: 0.25rem 0 0; }
+    .chip-swatch {
+      min-height: 5.4rem;
+      background: var(--swatch);
+      border: 1px solid color-mix(in srgb, var(--birren-deep-gray), transparent 62%);
+    }
+    .derived-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
+      gap: 1rem;
+      align-items: stretch;
+      margin-top: 1rem;
+      background: color-mix(in srgb, var(--birren-surface), transparent 7%);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 42%);
+      padding: 1rem;
+    }
+    .derived-panel p { margin-bottom: 0; }
+    .swatch {
+      min-height: 8rem;
+      background: var(--swatch);
+      border: 1px solid color-mix(in srgb, var(--birren-deep-gray), transparent 62%);
+    }
+    .color-meta { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+    .hex { color: var(--birren-text-muted); font-size: 0.78rem; }
+    .roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .role-card { min-height: 11rem; }
+    .role-card .sample { height: 3.4rem; margin-bottom: 0.9rem; border: 1px solid color-mix(in srgb, var(--birren-deep-gray), transparent 60%); }
+    .formats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    pre {
+      overflow: auto;
+      padding: 1rem;
+      background: var(--birren-deep-gray);
+      color: var(--birren-spotlight-buff);
+      border: 1px solid color-mix(in srgb, var(--birren-border), transparent 35%);
+    }
+    .bands { display: grid; grid-template-columns: repeat(16, 1fr); min-height: 1rem; overflow: hidden; border: 1px solid color-mix(in srgb, var(--birren-border), transparent 45%); }
+    .bands span { background: var(--swatch); }
+    footer { padding: 4rem 0 5rem; color: var(--birren-text-muted); }
+    @media (max-width: 920px) {
+      .split { grid-template-columns: 1fr; }
+      .derived-panel { grid-template-columns: 1fr; }
+      .chip-row { grid-template-columns: minmax(0, 1fr) minmax(8rem, 12rem); }
+      .chip-copy-left, .chip-copy-right { text-align: left; }
+      .chip-copy-left { order: 1; }
+      .chip-swatch-left { order: 2; }
+      .chip-copy-right { order: 3; }
+      .chip-swatch-right { order: 4; }
+      .principles, .roles, .formats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .principles, .roles, .formats { grid-template-columns: 1fr; }
+      .chip-row { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(2.8rem, 13vw, 4.4rem); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Industrial color, translated for software</p>
+        <h1>Birren Industrial Colors</h1>
+      <div class="bands" aria-label="Birren Industrial original chip swatch strip">
+        <span style="--swatch:#B6DAC0"></span><span style="--swatch:#DBD6C0"></span><span style="--swatch:#ADCED7"></span><span style="--swatch:#FDF7B1"></span><span style="--swatch:#BECECF"></span><span style="--swatch:#69867C"></span><span style="--swatch:#4B6E5B"></span><span style="--swatch:#E6DEAE"></span><span style="--swatch:#4E8C5A"></span><span style="--swatch:#988454"></span><span style="--swatch:#4F7B80"></span><span style="--swatch:#EEC902"></span><span style="--swatch:#E15602"></span><span style="--swatch:#7C0203"></span><span style="--swatch:#028339"></span><span style="--swatch:#026289"></span>
+      </div>
+        <p class="lead">A practical application palette centered on fatigue-reducing seafoam green, white instrument panels, and the chart's brilliant safety colors.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/r-cha/birren/blob/main/source/birren-industrial.json">Source JSON</a>
+          <a class="button" href="https://github.com/r-cha/birren/tree/main/applications/ghostty">Ghostty</a>
+          <a class="button" href="https://github.com/r-cha/birren/tree/main/applications/vscode">Visual Studio Code</a>
+          <a class="button" href="https://github.com/r-cha/birren/blob/main/applications/neovim/colors/birren-industrial.lua">Neovim</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="split" id="history">
+      <div>
+        <p class="eyebrow">History & significance</p>
+        <h2>Color as a tool, not decoration.</h2>
+        <figure class="source-scan">
+          <img src="birren-industrial-colors.jpeg" alt="Scanned Industrial Plants color chart with interior and safety color chips">
+          <figcaption>The source scan: a factory color chart organized as quiet working interiors beside high-visibility safety colors.</figcaption>
+        </figure>
+      </div>
+      <div class="measure">
+        <p>The industrial plant chart associated with Faber Birren presents color as part of the working environment: surfaces should control brightness, support efficient seeing, and reduce unnecessary strain. Its left column is quiet and architectural. Its right column is brilliant and coded for safety. In that setting, seafoam green also works by making white instrument panels easy to find without surrounding them in glare.</p>
+        <p>This software adaptation follows the same split. The soft seafoam <strong>Light Green</strong> becomes the default working field because it is the color the chart most strongly associates with visual comfort. <strong>Instrument White</strong> becomes the main panel color: the interface equivalent of a white gauge, dial, or control panel sitting inside a green-painted room. Beige is still present, but as a warm archival neutral rather than the default surface. The stronger greens, blues, yellow, orange, and red are held back for status, command, warning, success, and failure.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">System principles</p>
+      <h2>A factory chart becomes an interface chart.</h2>
+      <div class="principles">
+        <div class="principle">
+          <strong>Seafoam is the room.</strong>
+          <p>Light Green is not an accent. It is the default environment for reading and thinking, chosen because the source chart frames it as visually restful and because it gives white panels a clear edge.</p>
+        </div>
+        <div class="principle">
+          <strong>White carries the instruments.</strong>
+          <p>Instrument White is the primary card, sidebar, modal, and form surface. Beige is intentionally secondary, useful for notes and archival warmth rather than the main panel plane.</p>
+        </div>
+        <div class="principle">
+          <strong>Safety colors stay semantic.</strong>
+          <p>Solar Yellow, Alert Orange, Fire Red, Safety Green, and Caution Blue are vivid by design, so the palette uses them for meaning rather than decoration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="palette">
+      <p class="eyebrow">The sixteen chart chips</p>
+      <h2>Original colors from the scan.</h2>
+      <div class="chart-palette">
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Light Green</h3><span class="hex mono">#B6DAC0</span></div><p>The fatigue-reducing seafoam field for app backgrounds, editor canvases, dashboards, and long reading surfaces.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#B6DAC0"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#4E8C5A"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Medium Green</h3><span class="hex mono">#4E8C5A</span></div><p>Stable operational green for routine positive states, strings, confirmed work, and secondary accents.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Beige</h3><span class="hex mono">#DBD6C0</span></div><p>Warm neutral light for annotations, low-priority notes, archival side material, and gentle secondary surfaces.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#DBD6C0"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#988454"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Sandalwood</h3><span class="hex mono">#988454</span></div><p>Earthy bridge between neutral and warning for types, tags, metadata, annotation, and low-priority caution.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Light Blue</h3><span class="hex mono">#ADCED7</span></div><p>Cool daylight balance for selections, information surfaces, hover states, and calm emphasis.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#ADCED7"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#4F7B80"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Medium Blue</h3><span class="hex mono">#4F7B80</span></div><p>Subdued control blue for primary controls, functions, navigation accents, selected tabs, and UI chrome.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Soft Yellow</h3><span class="hex mono">#FDF7B1</span></div><p>Readable highlight without alarm for search matches, inline notes, tutorials, and temporary highlights.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#FDF7B1"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#EEC902"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Solar Yellow</h3><span class="hex mono">#EEC902</span></div><p>Brilliant visibility for warnings, focus rings, active search hits, required fields, and cursor-line markers.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Light Gray</h3><span class="hex mono">#BECECF</span></div><p>Cool quiet separator for secondary backgrounds, disabled controls, dividers, and empty states.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#BECECF"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#E15602"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Alert Orange</h3><span class="hex mono">#E15602</span></div><p>Escalation between warning and danger for modified files, destructive previews, alerts, and numeric emphasis.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Medium Gray</h3><span class="hex mono">#69867C</span></div><p>Middle value for muted text, inactive UI, borders, minimaps, and terminal bright black.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#69867C"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#7C0203"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Fire Red</h3><span class="hex mono">#7C0203</span></div><p>Compressed hazard signal for errors, failed jobs, delete actions, security alerts, and diff deletions.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Deep Gray</h3><span class="hex mono">#4B6E5B</span></div><p>Green-charcoal anchor for primary text, title bars, high-emphasis outlines, deep accents, and terminal black.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#4B6E5B"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#028339"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Safety Green</h3><span class="hex mono">#028339</span></div><p>Brilliant go/safe signal for passing tests, diff additions, success badges, and enabled indicators.</p></article>
+        </div>
+        <div class="chip-row">
+          <article class="chip-copy chip-copy-left"><div class="color-meta"><h3>Spotlight Buff</h3><span class="hex mono">#E6DEAE</span></div><p>Warm reflected light for raised highlights, headings, warm badges, and terminal normal white.</p></article>
+          <div class="chip-swatch chip-swatch-left" style="--swatch:#E6DEAE"></div>
+          <div class="chip-swatch chip-swatch-right" style="--swatch:#026289"></div>
+          <article class="chip-copy chip-copy-right"><div class="color-meta"><h3>Caution Blue</h3><span class="hex mono">#026289</span></div><p>Saturated instruction blue for links, command emphasis, important information, keywords, and actionable text.</p></article>
+        </div>
+      </div>
+      <aside class="derived-panel" style="--swatch:#F0F0EA" aria-label="Derived application color">
+        <div>
+          <div class="color-meta"><h3>Instrument White</h3><span class="hex mono">#F0F0EA</span></div>
+          <p><strong>Not one of the sixteen printed chips.</strong> This is sampled from the chart paper and promoted as a software-only role for white panels, gauges, cards, sidebars, forms, and controls set against the seafoam field.</p>
+        </div>
+        <div class="swatch"></div>
+      </aside>
+    </section>
+
+    <section id="roles">
+      <p class="eyebrow">Interface roles</p>
+      <h2>What each family does in an application.</h2>
+      <div class="roles">
+        <article class="role-card"><div class="sample" style="background:#B6DAC0"></div><strong>Background</strong><p>Light Green is the default work field. It should cover the most pixels and stay calm under long focus.</p></article>
+        <article class="role-card"><div class="sample" style="background:#F0F0EA"></div><strong>Surfaces</strong><p>Instrument White carries cards, sidebars, controls, and modals so they read like white panels against a seafoam room.</p></article>
+        <article class="role-card"><div class="sample" style="background:#4B6E5B"></div><strong>Text</strong><p>Deep Gray provides legible text without black-on-white glare, and doubles as the palette's deep structural accent.</p></article>
+        <article class="role-card"><div class="sample" style="background:#ADCED7"></div><strong>Selection</strong><p>Light Blue marks selected and related content with a cool signal that remains non-alarming.</p></article>
+        <article class="role-card"><div class="sample" style="background:#DBD6C0"></div><strong>Warm neutral</strong><p>Beige remains useful for notes, tags, and archival side matter, but it no longer carries the main interface plane.</p></article>
+        <article class="role-card"><div class="sample" style="background:#EEC902"></div><strong>Warning</strong><p>Solar Yellow is intentionally bright. Keep it scarce for focus, warnings, and required attention.</p></article>
+        <article class="role-card"><div class="sample" style="background:#7C0203"></div><strong>Danger</strong><p>Fire Red is reserved for failure, deletion, security, and irreversible or urgent states.</p></article>
+      </div>
+    </section>
+
+    <section id="formats" class="split">
+      <div>
+        <p class="eyebrow">Ports & formats</p>
+        <h2>One source, many applications.</h2>
+      </div>
+      <div>
+        <p>The repository follows the Flexoki/Nord pattern: keep primitive colors and semantic roles in a static source file, then present them as importable formats for tools and applications.</p>
+        <div class="formats">
+          <div class="format-card"><strong>Design tokens</strong><p><a href="https://github.com/r-cha/birren/blob/main/dist/birren-industrial.css">CSS</a>, <a href="https://github.com/r-cha/birren/blob/main/dist/_birren-industrial.scss">SCSS</a>, <a href="https://github.com/r-cha/birren/blob/main/dist/birren-industrial.less">Less</a>, <a href="https://github.com/r-cha/birren/blob/main/dist/birren-industrial.json">JSON</a>, <a href="https://github.com/r-cha/birren/blob/main/dist/birren-industrial.yaml">YAML</a>, and <a href="https://github.com/r-cha/birren/blob/main/dist/birren-industrial.js">JS</a>.</p></div>
+          <div class="format-card"><strong>Editors</strong><p><a href="https://github.com/r-cha/birren/tree/main/applications/vscode">Visual Studio Code</a> and <a href="https://github.com/r-cha/birren/blob/main/applications/neovim/colors/birren-industrial.lua">Neovim</a> light-only themes.</p></div>
+          <div class="format-card"><strong>Terminals</strong><p><a href="https://github.com/r-cha/birren/tree/main/applications/ghostty">Ghostty</a>, Alacritty, Kitty, and WezTerm light-only ports.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page">
+    <p>Unofficial historical adaptation for software interfaces; not an official product from Faber Birren's estate or any rights holder.</p>
+  </footer>
+</body>
+</html>

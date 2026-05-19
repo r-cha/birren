@@ -1,0 +1,34 @@
+# Generated from source/birren-industrial.json by scripts/build.py. Do not edit by hand.
+# Birren Industrial Light
+
+[colors.primary]
+background = "#B6DAC0"
+foreground = "#4B6E5B"
+
+[colors.cursor]
+text = "#B6DAC0"
+cursor = "#026289"
+
+[colors.selection]
+text = "#4B6E5B"
+background = "#ADCED7"
+
+[colors.normal]
+black = "#4B6E5B"
+red = "#7C0203"
+green = "#4E8C5A"
+yellow = "#988454"
+blue = "#4F7B80"
+magenta = "#E15602"
+cyan = "#026289"
+white = "#E6DEAE"
+
+[colors.bright]
+black = "#69867C"
+red = "#E15602"
+green = "#028339"
+yellow = "#EEC902"
+blue = "#026289"
+magenta = "#FDF7B1"
+cyan = "#ADCED7"
+white = "#F0F0EA"
