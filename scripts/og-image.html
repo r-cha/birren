@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Birren Industrial Colors — OG</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    :root {
+      --birren-light-green: #B6DAC0;
+      --birren-deep-gray: #4B6E5B;
+      --birren-medium-gray: #69867C;
+      --birren-instrument-white: #F0F0EA;
+      --font-display: Rockwell, Clarendon, "American Typewriter", "Roboto Slab", "Liberation Serif", Georgia, serif;
+      --font-industrial: "DIN Condensed", "Avenir Next Condensed", "Arial Narrow", "Franklin Gothic Medium", "Liberation Sans", "Trebuchet MS", sans-serif;
+      --font-mono: ui-monospace, "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+      --font-body: "Iowan Old Style", "Palatino Linotype", Palatino, "Liberation Serif", Georgia, serif;
+    }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: var(--birren-light-green);
+      color: var(--birren-deep-gray);
+      font-family: var(--font-body);
+      overflow: hidden;
+    }
+    .card {
+      width: 1200px;
+      height: 630px;
+      padding: 52px 72px 56px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .eyebrow {
+      color: var(--birren-deep-gray);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 800;
+      font-family: var(--font-industrial);
+      margin: 0;
+    }
+    .url {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      color: var(--birren-deep-gray);
+      opacity: 0.7;
+      letter-spacing: 0.02em;
+      margin: 0;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      line-height: 0.9;
+      margin: 36px 0 0;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      font-size: 104px;
+      color: var(--birren-deep-gray);
+    }
+    .lead {
+      font-size: 23px;
+      line-height: 1.32;
+      max-width: 900px;
+      color: var(--birren-deep-gray);
+      margin: 22px 0 0;
+    }
+    .bands {
+      display: flex;
+      align-items: stretch;
+      height: 52px;
+      outline: 1px solid var(--birren-deep-gray);
+      margin-top: auto;
+      line-height: 0;
+      font-size: 0;
+    }
+    .bands span { width: 6.25%; height: 100%; display: block; }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-industrial);
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--birren-deep-gray);
+      margin-top: 16px;
+    }
+    .footer-row .tags { display: flex; gap: 12px; }
+    .footer-row .tags span {
+      padding: 5px 10px;
+      border: 1px solid color-mix(in srgb, var(--birren-deep-gray), transparent 55%);
+      background: color-mix(in srgb, var(--birren-instrument-white), transparent 18%);
+      font-weight: 700;
+    }
+    .footer-row .credit { font-weight: 700; opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <p class="eyebrow">Industrial color, translated for software</p>
+      <p class="url">birren.vercel.app</p>
+    </div>
+
+    <h1>Birren Industrial<br>Colors</h1>
+    <p class="lead">A practical application palette centered on fatigue-reducing seafoam green, white instrument panels, and brilliant safety colors.</p>
+
+    <div class="bands" aria-hidden="true">
+      <span style="background:#B6DAC0"></span><span style="background:#DBD6C0"></span><span style="background:#ADCED7"></span><span style="background:#FDF7B1"></span><span style="background:#BECECF"></span><span style="background:#69867C"></span><span style="background:#4B6E5B"></span><span style="background:#E6DEAE"></span><span style="background:#4E8C5A"></span><span style="background:#988454"></span><span style="background:#4F7B80"></span><span style="background:#EEC902"></span><span style="background:#E15602"></span><span style="background:#7C0203"></span><span style="background:#028339"></span><span style="background:#026289"></span>
+    </div>
+    <div class="footer-row">
+      <div class="tags">
+        <span>16 chips</span>
+        <span>Light only</span>
+        <span>Editors · Terminals · Tokens</span>
+      </div>
+      <div class="credit">After Faber Birren</div>
+    </div>
+  </div>
+</body>
+</html>
