@@ -2,7 +2,7 @@
 local M = {}
 
 local colors = {
-  light_green = "#B6DAC0",
+  light_green = "#C2E1CA",
   instrument_white = "#F0F0EA",
   beige = "#DBD6C0",
   light_blue = "#ADCED7",
@@ -24,7 +24,7 @@ local colors = {
 }
 
 local roles = {
-  background = "#B6DAC0",
+  background = "#C2E1CA",
   background_muted = "#F0F0EA",
   surface = "#F0F0EA",
   surface_raised = "#F0F0EA",

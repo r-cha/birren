@@ -1,10 +1,10 @@
 # Generated from source/birren-industrial.json by scripts/build.py. Do not edit by hand.
 # Birren Industrial Light
 
-background = #B6DAC0
+background = #C2E1CA
 foreground = #3F614F
 cursor-color = #026289
-cursor-text = #B6DAC0
+cursor-text = #C2E1CA
 selection-background = #ADCED7
 selection-foreground = #3F614F
 

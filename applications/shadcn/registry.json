@@ -6,7 +6,7 @@
   "description": "An unofficial software palette adapted from an Industrial Plants color chart associated with Faber Birren, with seafoam light green as the primary fatigue-reducing field color, white instrument panels for high-contrast work surfaces, and brilliant safety colors reserved for state and hazard signaling.",
   "cssVars": {
     "light": {
-      "background": "136.7 32.7% 78.4%",
+      "background": "135.5 34.1% 82.2%",
       "foreground": "148.2 21.2% 31.4%",
       "card": "60.0 16.7% 92.9%",
       "card-foreground": "148.2 21.2% 31.4%",

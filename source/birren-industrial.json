@@ -19,9 +19,9 @@
   "colors": {
     "light-green": {
       "name": "Light Green",
-      "hex": "#B6DAC0",
+      "hex": "#C2E1CA",
       "group": "interior",
-      "intent": "The quiet seafoam field color for reducing visual fatigue.",
+      "intent": "The quiet seafoam field color for reducing visual fatigue, lifted slightly in OKLab from the raw chip to add contrast headroom for every token rendered on it while staying unmistakably seafoam.",
       "uiUse": "Primary background for editors, reading panes, dashboards, and long-lived work surfaces."
     },
     "instrument-white": {

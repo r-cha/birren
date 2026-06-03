@@ -2,11 +2,11 @@
 # Birren Industrial Light
 
 [colors.primary]
-background = "#B6DAC0"
+background = "#C2E1CA"
 foreground = "#3F614F"
 
 [colors.cursor]
-text = "#B6DAC0"
+text = "#C2E1CA"
 cursor = "#026289"
 
 [colors.selection]

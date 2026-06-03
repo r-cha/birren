@@ -3,9 +3,9 @@
 return {
   ["Birren Industrial Light"] = {
     foreground = "#3F614F",
-    background = "#B6DAC0",
+    background = "#C2E1CA",
     cursor_bg = "#026289",
-    cursor_fg = "#B6DAC0",
+    cursor_fg = "#C2E1CA",
     selection_fg = "#3F614F",
     selection_bg = "#ADCED7",
     ansi = {
