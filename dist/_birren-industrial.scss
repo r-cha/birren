@@ -6,8 +6,10 @@ $birren-beige: #DBD6C0;
 $birren-light-blue: #ADCED7;
 $birren-soft-yellow: #FDF7B1;
 $birren-light-gray: #BECECF;
-$birren-medium-gray: #69867C;
-$birren-deep-gray: #4B6E5B;
+$birren-mid-neutral: #8FA89E;
+$birren-medium-gray: #5F7B71;
+$birren-muted-text: #52736A;
+$birren-deep-gray: #3F614F;
 $birren-spotlight-buff: #E6DEAE;
 $birren-medium-green: #4E8C5A;
 $birren-sandalwood: #988454;
@@ -15,7 +17,7 @@ $birren-medium-blue: #4F7B80;
 $birren-solar-yellow: #EEC902;
 $birren-alert-orange: #E15602;
 $birren-fire-red: #7C0203;
-$birren-safety-green: #028339;
+$birren-safety-green: #007839;
 $birren-caution-blue: #026289;
 
 $birren-colors: (
@@ -25,8 +27,10 @@ $birren-colors: (
   "light-blue": #ADCED7,
   "soft-yellow": #FDF7B1,
   "light-gray": #BECECF,
-  "medium-gray": #69867C,
-  "deep-gray": #4B6E5B,
+  "mid-neutral": #8FA89E,
+  "medium-gray": #5F7B71,
+  "muted-text": #52736A,
+  "deep-gray": #3F614F,
   "spotlight-buff": #E6DEAE,
   "medium-green": #4E8C5A,
   "sandalwood": #988454,
@@ -34,7 +38,7 @@ $birren-colors: (
   "solar-yellow": #EEC902,
   "alert-orange": #E15602,
   "fire-red": #7C0203,
-  "safety-green": #028339,
+  "safety-green": #007839,
   "caution-blue": #026289,
 );
 
@@ -45,7 +49,7 @@ $birren-roles: (
   "surface-raised": $birren-instrument-white,
   "surface-sunken": $birren-light-blue,
   "text": $birren-deep-gray,
-  "text-muted": $birren-medium-gray,
+  "text-muted": $birren-muted-text,
   "border": $birren-medium-gray,
   "primary": $birren-medium-blue,
   "secondary": $birren-medium-green,

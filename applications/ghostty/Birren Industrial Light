@@ -2,13 +2,13 @@
 # Birren Industrial Light
 
 background = #B6DAC0
-foreground = #4B6E5B
+foreground = #3F614F
 cursor-color = #026289
 cursor-text = #B6DAC0
 selection-background = #ADCED7
-selection-foreground = #4B6E5B
+selection-foreground = #3F614F
 
-palette = 0=#4B6E5B
+palette = 0=#3F614F
 palette = 1=#7C0203
 palette = 2=#4E8C5A
 palette = 3=#988454
@@ -16,9 +16,9 @@ palette = 4=#4F7B80
 palette = 5=#E15602
 palette = 6=#026289
 palette = 7=#E6DEAE
-palette = 8=#69867C
+palette = 8=#5F7B71
 palette = 9=#E15602
-palette = 10=#028339
+palette = 10=#007839
 palette = 11=#EEC902
 palette = 12=#026289
 palette = 13=#FDF7B1

@@ -9,15 +9,19 @@ The source values live in [`source/birren-industrial.json`](source/birren-indust
 
 ## Palette
 
-Original chip values are 40×40 pixel averages sampled from the center of each printed chip in [`birren-industrial-colors.jpeg`](birren-industrial-colors.jpeg). `Instrument White` is a derived software role sampled from the chart paper; it is not one of the sixteen printed chips.
+The values below are the shipped software values. They begin as 40×40 pixel averages sampled from the center of each printed chip in [`birren-industrial-colors.jpeg`](birren-industrial-colors.jpeg), but a few are tuned for screens rather than used raw — see [Screen tuning](#screen-tuning). `Instrument White` is a derived software role sampled from the chart paper; it is not one of the sixteen printed chips.
 
-### Derived application role
+### Derived application roles
+
+These are software-only roles, not printed chips. `Instrument White` is sampled from the chart paper; `Mid Neutral` and `Muted Text` are tuned in OKLab to even out the neutral lightness ramp and to keep low-emphasis text legible against the seafoam field (where the original muted gray fell below readable contrast).
 
 | Color | Hex | Suggested software use |
 | --- | --- | --- |
 | Instrument White | `#F0F0EA` | Primary cards, panels, sidebars, forms, modals, and instrument-like UI surfaces on seafoam. |
+| Mid Neutral | `#8FA89E` | Subtle dividers, disabled fills, and quiet structure between the light interiors and the working grays. |
+| Muted Text | `#52736A` | Comments, captions, line numbers, descriptions, and secondary text that must stay legible on the field. |
 
-### Original printed chips
+### Printed chips (sampled, with screen tuning where noted)
 
 | Color | Hex | Suggested software use |
 | --- | --- | --- |
@@ -26,8 +30,8 @@ Original chip values are 40×40 pixel averages sampled from the center of each p
 | Light Blue | `#ADCED7` | Selections, info surfaces, calm hover states, and non-urgent emphasis. |
 | Soft Yellow | `#FDF7B1` | Search hits, inline highlights, and teaching callouts. |
 | Light Gray | `#BECECF` | Secondary backgrounds, dividers, disabled UI, and quiet structure. |
-| Medium Gray | `#69867C` | Muted text, inactive UI, borders, minimap marks, and terminal bright black. |
-| Deep Gray | `#4B6E5B` | Main text, title bars, terminal black, high-emphasis outlines, and deep structural accents. |
+| Medium Gray | `#5F7B71` | Borders, dividers, inactive UI, minimap marks, and terminal bright black (tuned to clear 3:1 on the field). |
+| Deep Gray | `#3F614F` | Main text, title bars, terminal black, high-emphasis outlines, and deep structural accents (tuned to AA body text on the field). |
 | Spotlight Buff | `#E6DEAE` | Warm highlights, headings, terminal normal white, and soft badges. |
 | Medium Green | `#4E8C5A` | Routine positive states, strings, completion, and secondary brand accents. |
 | Sandalwood | `#988454` | Types, tags, metadata, annotation, and low-priority caution. |
@@ -35,8 +39,20 @@ Original chip values are 40×40 pixel averages sampled from the center of each p
 | Solar Yellow | `#EEC902` | Warnings, active search hits, focus rings, and required-field indicators. |
 | Alert Orange | `#E15602` | Changed files, escalation states, destructive previews, and performance alerts. |
 | Fire Red | `#7C0203` | Errors, failed jobs, delete affordances, security alerts, and diff deletions. |
-| Safety Green | `#028339` | Success states, passing tests, diff additions, and high-confidence positive feedback. |
+| Safety Green | `#007839` | Success states, passing tests, diff additions, and high-confidence positive feedback (shifted darker and cooler so it reads distinctly from the routine Medium Green). |
 | Caution Blue | `#026289` | Links, command emphasis, important info, keywords, and actionable text. |
+
+## Screen tuning
+
+The chart was designed for pigment on physical surfaces, not emissive displays, and predates modern legibility models (WCAG, APCA). A handful of chips were nudged in the perceptually uniform OKLab space — holding each color's hue so its character is preserved — to meet contrast standards on screen and to even out the neutral ramp. The seafoam field, white panels, subdued machine colors, and brilliant safety signals are otherwise unchanged.
+
+| Color | Before | After | Why |
+| --- | --- | --- | --- |
+| Deep Gray (body text) | `#4B6E5B` | `#3F614F` | Body text was 3.74:1 on the seafoam field (below AA). Darkened to **4.5:1 AA** while keeping the green-charcoal character. |
+| Medium Gray (border) | `#69867C` | `#5F7B71` | Borders/dividers were 2.6:1. Darkened to clear **3:1** non-text contrast. |
+| Safety Green (success) | `#028339` | `#007839` | Was nearly identical to the routine Medium Green (same hue, ~0.05 lightness apart). Shifted darker and slightly cooler so success reads as a distinct signal. |
+| Muted Text *(new)* | — | `#52736A` | The old muted gray was used for comments at 2.6:1. A dedicated, darker low-emphasis value keeps secondary text legible without competing with body text. |
+| Mid Neutral *(new)* | — | `#8FA89E` | The neutral ramp jumped from light interiors straight to the working grays; this fills the perceptual gap for subtle dividers and disabled states. |
 
 ## Formats
 
