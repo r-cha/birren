@@ -2,37 +2,37 @@
 /* Birren Industrial — shadcn/ui theme using raw hex values for Tailwind v4 (@theme inline). */
 
 :root {
-  --background: #B6DAC0;
-  --foreground: #4B6E5B;
+  --background: #C2E1CA;
+  --foreground: #3F614F;
   --card: #F0F0EA;
-  --card-foreground: #4B6E5B;
+  --card-foreground: #3F614F;
   --popover: #F0F0EA;
-  --popover-foreground: #4B6E5B;
+  --popover-foreground: #3F614F;
   --primary: #4F7B80;
   --primary-foreground: #F0F0EA;
   --secondary: #E6DEAE;
-  --secondary-foreground: #4B6E5B;
+  --secondary-foreground: #3F614F;
   --muted: #BECECF;
-  --muted-foreground: #69867C;
+  --muted-foreground: #52736A;
   --accent: #026289;
   --accent-foreground: #F0F0EA;
   --destructive: #7C0203;
   --destructive-foreground: #F0F0EA;
-  --border: #69867C;
-  --input: #69867C;
+  --border: #5F7B71;
+  --input: #5F7B71;
   --ring: #EEC902;
   --chart-1: #4F7B80;
-  --chart-2: #028339;
+  --chart-2: #007839;
   --chart-3: #E15602;
   --chart-4: #988454;
   --chart-5: #026289;
   --sidebar: #F0F0EA;
-  --sidebar-foreground: #4B6E5B;
+  --sidebar-foreground: #3F614F;
   --sidebar-primary: #4F7B80;
   --sidebar-primary-foreground: #F0F0EA;
   --sidebar-accent: #ADCED7;
-  --sidebar-accent-foreground: #4B6E5B;
-  --sidebar-border: #69867C;
+  --sidebar-accent-foreground: #3F614F;
+  --sidebar-border: #5F7B71;
   --sidebar-ring: #EEC902;
   --radius: 0.5rem;
 }

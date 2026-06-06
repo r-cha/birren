@@ -2,14 +2,14 @@
 
 return {
   ["Birren Industrial Light"] = {
-    foreground = "#4B6E5B",
-    background = "#B6DAC0",
+    foreground = "#3F614F",
+    background = "#C2E1CA",
     cursor_bg = "#026289",
-    cursor_fg = "#B6DAC0",
-    selection_fg = "#4B6E5B",
+    cursor_fg = "#C2E1CA",
+    selection_fg = "#3F614F",
     selection_bg = "#ADCED7",
     ansi = {
-      "#4B6E5B",
+      "#3F614F",
       "#7C0203",
       "#4E8C5A",
       "#988454",
@@ -19,9 +19,9 @@ return {
       "#E6DEAE",
     },
     brights = {
-      "#69867C",
+      "#5F7B71",
       "#E15602",
-      "#028339",
+      "#007839",
       "#EEC902",
       "#026289",
       "#FDF7B1",

@@ -13,14 +13,15 @@
     "image": "../birren-industrial-colors.jpeg",
     "source": "Scanned Industrial Plants color chart associated with Faber Birren",
     "sampling": "Original chip hex values are 40×40 pixel averages sampled from the center of each printed color chip in the local JPEG scan. Instrument White is a 40×40 average sampled from the chart paper to represent white instrument panels against the seafoam field.",
+    "tuning": "A few sampled values are tuned for emissive displays rather than used raw. Holding each color's hue in OKLab, Deep Gray and Medium Gray are darkened to meet WCAG AA body text (4.5:1) and 3:1 component contrast on the seafoam field, Safety Green is shifted darker and slightly cooler to separate it from the routine Medium Green, and two derived neutrals (Muted Text, Mid Neutral) are added to keep low-emphasis text legible and to even the neutral lightness ramp.",
     "note": "This is an independent historical adaptation, not an official product from Faber Birren's estate or any rights holder."
   },
   "colors": {
     "light-green": {
       "name": "Light Green",
-      "hex": "#B6DAC0",
+      "hex": "#C2E1CA",
       "group": "interior",
-      "intent": "The quiet seafoam field color for reducing visual fatigue.",
+      "intent": "The quiet seafoam field color for reducing visual fatigue, lifted slightly in OKLab from the raw chip to add contrast headroom for every token rendered on it while staying unmistakably seafoam.",
       "uiUse": "Primary background for editors, reading panes, dashboards, and long-lived work surfaces."
     },
     "instrument-white": {
@@ -58,18 +59,32 @@
       "intent": "A cool structural neutral for separating areas without strong contrast.",
       "uiUse": "Secondary backgrounds, dividers, disabled controls, code block frames, and quiet empty states."
     },
+    "mid-neutral": {
+      "name": "Mid Neutral",
+      "hex": "#8FA89E",
+      "group": "derived",
+      "intent": "A perceptually mid-light green-gray that fills the gap between the light interiors and the working grays so the neutral ramp steps evenly.",
+      "uiUse": "Subtle dividers, disabled fills, secondary separators, and quiet structure that should read above the field but below a border."
+    },
     "medium-gray": {
       "name": "Medium Gray",
-      "hex": "#69867C",
+      "hex": "#5F7B71",
       "group": "interior",
-      "intent": "The working middle value between the fatigue-reducing field and deep text.",
-      "uiUse": "Muted text, secondary icons, borders, terminal bright black, minimap marks, and inactive UI."
+      "intent": "The working middle value between the fatigue-reducing field and deep text, tuned to clear a 3:1 component contrast against the seafoam field.",
+      "uiUse": "Borders, secondary icons, terminal bright black, minimap marks, dividers, and inactive UI chrome."
+    },
+    "muted-text": {
+      "name": "Muted Text",
+      "hex": "#52736A",
+      "group": "derived",
+      "intent": "A dedicated low-emphasis text value, darkened from the old muted gray so comments and secondary copy stay legible against the field instead of fading below readable contrast.",
+      "uiUse": "Comments, captions, line numbers, descriptions, placeholder and secondary text on the field or panels."
     },
     "deep-gray": {
       "name": "Deep Gray",
-      "hex": "#4B6E5B",
+      "hex": "#3F614F",
       "group": "interior",
-      "intent": "A green-charcoal anchor that preserves the industrial character of the chart.",
+      "intent": "A green-charcoal anchor that preserves the industrial character of the chart, tuned to meet AA body-text contrast on the seafoam field.",
       "uiUse": "Primary text, title bars, terminal black, high-emphasis outlines, and deep structural accents."
     },
     "spotlight-buff": {
@@ -123,7 +138,7 @@
     },
     "safety-green": {
       "name": "Safety Green",
-      "hex": "#028339",
+      "hex": "#007839",
       "group": "safety",
       "intent": "A brilliant go/safe signal distinct from the restful background green.",
       "uiUse": "Success states, passing tests, additions in diffs, enabled safety indicators, and high-confidence positive feedback."
@@ -143,7 +158,7 @@
     "surface-raised": "instrument-white",
     "surface-sunken": "light-blue",
     "text": "deep-gray",
-    "text-muted": "medium-gray",
+    "text-muted": "muted-text",
     "border": "medium-gray",
     "primary": "medium-blue",
     "secondary": "medium-green",
@@ -158,7 +173,7 @@
     "focus": "solar-yellow"
   },
   "syntax": {
-    "comment": "medium-gray",
+    "comment": "muted-text",
     "foreground": "deep-gray",
     "keyword": "caution-blue",
     "string": "medium-green",
@@ -204,7 +219,7 @@
     "secondary": "spotlight-buff",
     "secondary-foreground": "deep-gray",
     "muted": "light-gray",
-    "muted-foreground": "medium-gray",
+    "muted-foreground": "muted-text",
     "accent": "caution-blue",
     "accent-foreground": "instrument-white",
     "destructive": "fire-red",
